@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <video class="bg-video" autoplay loop muted playsinline>
+      <source src="back.mp4" type="video/mp4" />
+    </video>
+    <div class="container">
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const sections = document.querySelectorAll(".main section");
+          const navLinks = document.querySelectorAll(".navbar a");
+
+          window.addEventListener("scroll", () => {
+            let current = "";
+            sections.forEach((section) => {
+              const sectionTop = section.offsetTop - 100;
+              if (pageYOffset >= sectionTop) {
+                current = section.getAttribute("id");
+              }
+            });
+
+            navLinks.forEach((link) => {
+              link.classList.remove("active");
+              if (link.getAttribute("href") === "#" + current) {
+                link.classList.add("active");
+              }
+            });
+          });
+        });
+      </script>
+      <div class="navbar">
+        <ul>
+          <li>
+            <a href="#home"><i class="fas fa-home"></i></a>
+          </li>
+          <li>
+            <a href="#about"><i class="fas fa-info-circle"></i></a>
+          </li>
+          <li>
+            <a href="#experience"><i class="fas fa-briefcase"></i></a>
+          </li>
+          <li>
+            <a href="#education"><i class="fas fa-graduation-cap"></i></a>
+          </li>
+          <li>
+            <a href="#skills"><i class="fas fa-cogs"></i></a>
+          </li>
+          <li>
+            <a href="#projects"><i class="fas fa-envelope"></i></a>
+          </li>
+          <li>
+            <a href="#contact"><i class="fas fa-phone"></i></a>
+          </li>
+          <li>
+            <a href="#footer"><i class="fas fa-hand"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="main">
+        <div class="box">
+          <section id="home" class="home">
+            <h1>Welcome to My Portfolio</h1>
+            <p>
+              <span>Hi, I'm Joel Bukoma, a passionate web developer.</span>
+            </p>
+            <p>This is a simple webpage to showcase my skills and projects.</p>
+            <p>
+              I have included various sections to provide a comprehensive
+              overview of my work.
+            </p>
+            <p>
+              Feel free to explore the different sections to learn more about
+              me.
+            </p>
+            <button class="main-button" a href="index.html">Click Me</button>
+          </section>
+        </div>
+
+        <div class="box">
+          <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>
+              I am a web developer with a passion for creating dynamic and
+              responsive websites.
+            </p><br />
+            <p>
+              I have experience in HTML, CSS, JavaScript, and various web
+              technologies.
+            </p>
+          </section>
+        </div>
+        <div class="box">
+          <section id="experience" class="experience">
+            <h2>Experience</h2>
+            <p>Web Developer at Desishub Technologies</p>
+            <p>July 2025 - Present</p><br />
+            <p>
+              Developed and maintained web applications using modern web
+              technologies.
+            </p><br />
+            <p>Collaborated with designers and backend developers. At the Company, I was responsible for implementing new features and optimizing existing ones.</p>
+          </section>
+        </div>
+        <div class="box">
+          <section id="education" class="education">
+            <h2>Education</h2>
+            <div class="tec-image"></div><br />
+            <p>National Certificate in Computer Science</p>
+            <p>YMCA COMPREHENSIVE INSTITUTE, 2025</p><br />
+            <p>Web Development</p>
+            <p>Desishub Technologies</p>
+          </section>
+        </div>
+        <div class="box">
+          <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <ul>
+              <li>HTML</li>
+              <p>Have worked with different HTML tags and elements.</p>
+              <li>CSS</li>
+              <p>Have experience with Flexbox and Grid layouts.</p>
+              <li>JavaScript</li>
+              <p>Have built interactive web applications using JavaScript.</p>
+              <li>React</li>
+              <p>Have experience building user interfaces with React.</p>
+            </ul>
+          </section>
+        </div>
+        <div class="box">
+          <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <ul>
+              <li>Project 1</li>
+              <p>
+                A web application that allows users to track their daily tasks.
+              </p>
+              <li>Project 2</li>
+              <p>A responsive website built with HTML, CSS, and JavaScript.</p>
+              <li>Project 3</li>
+              <p>A mobile application built with React Native.</p>
+              <li>Project 4</li>
+              <p>A web application built with Angular.</p>
+              <li>Project 5</li>
+              <p>A desktop application built with Electron.</p>
+              <li>Project 6</li>
+              <p>A web application built with Vue.js.</p>
+              <li>Future Project</li>
+              <p>
+                A web application that will utilize the latest technologies.
+              </p>
+            </ul>
+          </section>
+        </div>
+        <div class="box">
+            <section id="contact" class="contact">
+              <h2>Contact</h2>
+              <p>If you would like to get in touch, feel free to reach out!</p><br />
+
+                  <p class="fas fa-envelope"><br /></p>
+                  <p>bukomajoel1@gmail.com</p><br />
+
+                  <p class="fas fa-phone"></p><br />
+                  <p>(+256) 705-820835</p><br />
+
+                  <p class="fas fa-map-marker-alt"></p><br />
+                  <p>Kampala, Uganda</p><br />
+                  <p>Follow me on social media:</p><br />
+                  <div class="contact-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                  </div>
+            </section>
+        </div>
+          <div class="box">
+            <section id="footer" class="footer">
+              <h2>Thanks for visiting!</h2>
+              <div class="footer-image"></div>
+              <p>&copy; 2023 Joel Bukoma. All rights reserved.</p>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Profile</h2>
+        <img
+          src="joel.jpg"
+          alt="Image Description"
+          class="card-image"
+        />
+        <p>Joel Bukoma</p>
+        <p>Web Developer</p>
+        <button>Learn More</button>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
